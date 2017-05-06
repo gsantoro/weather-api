@@ -6,12 +6,9 @@
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-	$.ajax({
-	  url: "http://localhost:5000/",
-	  success: function(data) {
-	  	$("#content").text(data);
-	  }
-	});
+	$.getJSON("http://localhost:5000/health", function(json) {
+	  	$("#content").text(json.status);
+	  });
 </script>
 <body>
 	<div id="content"></div>

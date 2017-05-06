@@ -1,15 +1,17 @@
 from flask import Flask
 from flask_cors import CORS, cross_origin
-from flask import jsonify
+from flask_restful import Api
+
+from api.hello import HelloWorld
+from api.health import Health
 
 app = Flask(__name__)
+api = Api(app)
+
 CORS(app)
 
+api.add_resource(Health, '/health')
+api.add_resource(HelloWorld, '/')
 
-@app.route('/health')
-def health():
-    return 'Ok'
-
-@app.route('/')
-def hello():
-	return "Hello World"
+if __name__ == '__main__':
+    app.run(debug=True)

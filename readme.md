@@ -11,6 +11,21 @@
 * [gulp](http://gulpjs.com/) - automate tasks
 
 
+## Development
+Run the backend with
+
+	export FLASK_APP=app/backend/app.py
+	flask run --host=0.0.0.0
+
+or 
+	
+	python app/backend/app.py
+
+Run the frontent and enable livereload
+
+	gulp webserver
+
+
 ## 1. Install gulp
 Install gulp
 
