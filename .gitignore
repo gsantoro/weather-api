@@ -1,1 +1,3 @@
 .ignore
+**.pyc
+**/__pycache__

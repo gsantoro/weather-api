@@ -11,7 +11,7 @@
 * [gulp](http://gulpjs.com/) - automate tasks
 
 
-## Install gulp
+## 1. Install gulp
 Install gulp
 
 	npm install gulp-cli -g
@@ -24,4 +24,16 @@ Create gulpfile
 Install gulp livereload 
 
 	npm install --save-dev gulp-server-livereload
-	
+
+
+## 2. Flask backend
+Needed to obfuscate private api keys.
+
+Install dependencies
+
+	pip install -r requirement.txt
+
+Run the backend
+
+	export FLASK_APP=app/backend/app.py
+	flask run --host=0.0.0.0
