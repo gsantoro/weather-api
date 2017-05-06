@@ -14,11 +14,13 @@
 ## Development
 Run the backend with
 
+	export WEATHER_API_KEY=<api_key>
 	export FLASK_APP=app/backend/app.py
 	flask run --host=0.0.0.0
 
 or 
-	
+
+	export WEATHER_API_KEY=<api_key>
 	python app/backend/app.py
 
 Run the frontent and enable livereload

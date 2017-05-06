@@ -6,8 +6,14 @@
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-	$.getJSON("http://localhost:5000/health", function(json) {
-	  	$("#content").text(json.status);
+	$.getJSON("http://localhost:5000/weather/London", function(json) {
+		var city = 'London',
+			description = json.weather[0].description;
+
+		var result = "City: " + city + " Weather: " + description;
+
+	  	$("#content").text(result);
+	  	console.log(json)
 	  });
 </script>
 <body>
